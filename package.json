@@ -19,6 +19,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "faker": "^4.1.0",
-    "node": "^13.1.0"
+    "node": "^13.3.0",
+    "superagent": "^5.1.2"
   }
 }
