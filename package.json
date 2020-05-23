@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/gautamits/random-log-generator#readme",
   "dependencies": {
+    "chalk": "^4.0.0",
     "express": "^4.17.1",
     "faker": "^4.1.0",
     "node": "^13.3.0",
