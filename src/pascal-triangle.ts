@@ -9,7 +9,7 @@ const tr1 = function triangle(n) {
 };
 
 // Type 2: recursive, tailcall style (optimazed by nodejs-v6 runtime)
-const tr2 = function triangle(n, last = [1], tri = [last]) {
+export const tr2 = function triangle(n: number, last = [1], tri = [last]) {
   if (n === 0) return tri;
   const ls = [0].concat(last),
     rs = last.concat([0]);
@@ -31,7 +31,7 @@ const tr3 = function triangle(n) {
 };
 
 // pyramid formatter
-function pyramid(tri) {
+export function pyramid(tri) {
   const last = tri[tri.length - 1];
   const nlen = `${last[last.length >> 1]}`.length;
   const str = (n) => {
@@ -41,11 +41,4 @@ function pyramid(tri) {
   const space = " ".repeat(nlen);
   const pad = (i) => space.repeat(tri.length - 1 - i);
   return tri.map((l, i) => `${pad(i)}${l.map(str).join(space)}`).join("\n");
-}
-
-module.exports={
-    pyramid,
-    tr1,
-    tr2,
-    tr3,
 }

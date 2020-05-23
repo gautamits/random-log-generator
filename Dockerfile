@@ -6,6 +6,6 @@ RUN chmod +x /tini
 ENTRYPOINT ["/tini", "--"]
 
 COPY /.  .
-RUN npm install
-
-CMD ["node","index.js"]
+RUN yarn install
+RUN yarn build
+CMD ["node","dist/index.js"]
