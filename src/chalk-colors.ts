@@ -1,7 +1,6 @@
-import {between} from './util'
-
-const chalk = require("chalk");
-var faker = require("faker");
+import {between} from './util';
+import faker from 'faker';
+import chalk from 'chalk';
 
 const modifiers = [
   "reset",
@@ -54,7 +53,7 @@ const backgroundColors = [
 ];
 
 export function randomParagraph() {
-  const paragraph = faker.lorem.paragraph();
+  const paragraph = faker.lorem.sentence();
   paragraph.split(" ").forEach((curr) => {
     const modifierOn = Math.random() >= 0.5;
     const isColor = Math.random() >= 0.5;
