@@ -40,6 +40,7 @@ setInterval(function(){
 	const isTriangle = Math.random() >= 0.5;
 	if(isTriangle){
 		const randomNumber = between(5, 15)
+		console.log('')
 		console.log(pyramid(tr2(randomNumber)))
 	}
 	else{
