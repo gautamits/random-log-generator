@@ -11,8 +11,6 @@ const randomParagraph = require('./chalk-colors').randomParagraph
 async function chuck(req:Request, res: Response){
 	try{
 		const result = await request.get('https://api.chucknorris.io/jokes/random')
-		//const result2 = await result.json()
-		//console.log({result2});
 		res.status(200).type('json').send(result.text)
 	}
 	catch(err){
@@ -44,7 +42,7 @@ setInterval(function(){
 		console.log(pyramid(tr2(randomNumber)))
 	}
 	else{
-		const numParaGraphs = between(10, 500)
+		const numParaGraphs = between(1, 10)
 		setIntervalX(randomParagraph,10000 / numParaGraphs, numParaGraphs)
 	}
 }, 10000)
